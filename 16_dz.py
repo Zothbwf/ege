@@ -78,14 +78,15 @@
 #     return 0
 #   return f(s+1,e) + f(s+4,e) + f(s*2,e)
 # print(f(3,24))
-k = 0
-for i in range(2025,10000):
-  xlist = list(range(2024,i+1))
-  while len(xlist) >= 3:
-    xlist1 = xlist[:-2]
-    xlist1.append(xlist[-1] - xlist[-2])
-    xlist = sorted(xlist1)
-  if sum(map(int,xlist)) == 0:
-    k+= 1
-  print(i)
-print(k)
+
+# k = 0
+# for i in range(2025,10000):
+#   xlist = list(range(2024,i+1))
+#   while len(xlist) >= 3:
+#     xlist1 = xlist[:-2]
+#     xlist1.append(xlist[-1] - xlist[-2])
+#     xlist = sorted(xlist1)
+#   if sum(map(int,xlist)) == 0:
+#     k+= 1
+#   print(i)
+# print(k)

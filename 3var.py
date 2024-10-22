@@ -151,10 +151,10 @@
 # print([s for s in range(1,204) if f(s,3) and not(f(s,1))])
 # print([s for s in range(1,204) if f(s,4) and not(f(s,2))])
 
-def f(s,e):
-    if s == e:
-        return 1
-    if s > e or s == 6 or s == 17:
-        return 0
-    return f(s+2,e) + f(s+3,e) + f(s*5,e)
-print(f(1,31))
+# def f(s,e):
+#     if s == e:
+#         return 1
+#     if s > e or s == 6 or s == 17:
+#         return 0
+#     return f(s+2,e) + f(s+3,e) + f(s*5,e)
+# print(f(1,31))
