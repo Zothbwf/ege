@@ -143,7 +143,7 @@
 #     if s < e:
 #         return 0 
 #     return f(s-1,e) + f(s//2,e)
-# print(f(31,12)*f(12,1))
+# print(f(31,12)*f(12,2))
 
 # file = "E:\\downloads\\24var13-17.txt"
 # with open(file) as f:
