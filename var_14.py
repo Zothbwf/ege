@@ -78,17 +78,17 @@
 #         print(n)
 #         break
 
-from ipaddress import *
-for a in range(0,256):
-    goida = True
-    net = ip_network(f'126.255.{a}.100/255.255.240.0',0)
-    for ip in net:
-        ip = f'{ip:b}'
-        if sum(map(int,ip[:16])) < sum(map(int,ip[16:])):
-            goida = False
-            break
-    if goida == True:
-        print(a)
+# from ipaddress import *
+# for a in range(0,256):
+#     goida = True
+#     net = ip_network(f'126.255.{a}.100/255.255.240.0',0)
+#     for ip in net:
+#         ip = f'{ip:b}'
+#         if sum(map(int,ip[:16])) < sum(map(int,ip[16:])):
+#             goida = False
+#             break
+#     if goida == True:
+#         print(a)
 
 # k=0
 # x = 3 ** 2020 - 3 ** 1020 + 9 ** 800 -81
