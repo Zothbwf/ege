@@ -56,10 +56,12 @@
 #         for x3 in x:
 #             for x4 in x:
 #                 w = x1 + x2 + x3 + x4
-#                 for i in x:
-#                     if i*2 in w:
-#                         k+=1
-#                         break
+#                 counts = [w.count(i) for i in w]
+#                 if counts.count(2) == 2:
+#                     for i in x:
+#                         if i*2 in w:
+#                             k+=1
+#                             break
 # print(k)
 
 # f = '9_var17.txt'
@@ -85,8 +87,10 @@
 # find = ip_address('244.55.138.96')
 # for a in range(6,33):
 #     net = ip_network(f'244.55.138.100/{a}',0)
-#     if find in net:
+#     if net.network_address == find:
 #         print(a)
+# print(int('1'*(3)+'0'*(5),2))
+
 
 # for x in '0123456789ABCDE':
 #     goida = int(f'135{x}7',15) + int(f'7{x}531',15)
@@ -138,14 +142,14 @@
 #     return f(s+2,e) + f(s*2,e) + f(s*3,e)
 # print(f(1,6)*f(6,24))
 
-# file = "E:\\downloads\\24var13-17 (1).txt"
-# lens = []
-# with open(file) as f:
-#     goida = f.read()
-# goida = goida.strip()
-# goida = goida.split('Z')
-# lens = [len(i) for i in goida]
-# par = []
-# for i in range(len(lens)-2):
-#     par.append(lens[i]+lens[i+1]+lens[i+2]-1)
-# print(max(par))
+file = "E:\\downloads\\24var13-17 (1).txt"
+lens = []
+with open(file) as f:
+    goida = f.read()
+goida = goida.strip()
+goida = goida.split('Z')
+lens = [len(i) for i in goida]
+par = []
+for i in range(len(lens)-2):
+    par.append(lens[i]+lens[i+1]+lens[i+2]-1)
+print(max(par))
